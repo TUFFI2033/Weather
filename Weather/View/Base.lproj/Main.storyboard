@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34B-KC-558">
+                                <rect key="frame" x="114.66666666666669" y="459" width="161" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gY1-PB-mQW">
+                                <rect key="frame" x="114.66666666666669" y="405" width="161" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="826-rL-9b1">
+                                <rect key="frame" x="0.0" y="47" width="390" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="tHo-d3-ZKP"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="34B-KC-558" firstAttribute="top" secondItem="gY1-PB-mQW" secondAttribute="bottom" constant="20" id="GIC-k8-geu"/>
+                            <constraint firstItem="gY1-PB-mQW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QSg-IY-Dxl"/>
+                            <constraint firstItem="34B-KC-558" firstAttribute="leading" secondItem="gY1-PB-mQW" secondAttribute="leading" id="Vdm-iV-EN4"/>
+                            <constraint firstItem="826-rL-9b1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dGh-cu-D4t"/>
+                            <constraint firstItem="gY1-PB-mQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dIi-4M-QpK"/>
+                            <constraint firstItem="34B-KC-558" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ihV-dA-FyB"/>
+                            <constraint firstItem="826-rL-9b1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="loR-vF-x4M"/>
+                            <constraint firstItem="826-rL-9b1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zjg-rB-cgz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="gY1-PB-mQW" id="bUv-pn-if7"/>
+                        <outlet property="searchBar" destination="826-rL-9b1" id="xXt-5s-kv7"/>
+                        <outlet property="tempLabel" destination="34B-KC-558" id="Bsv-Z3-JQT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

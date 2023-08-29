@@ -9,7 +9,7 @@ import Foundation
 
 struct WeatherResults: Decodable {
     let location: Location
-    let current: Current
+    var current: Current
     
     struct Location: Decodable {
         let name: String
@@ -18,10 +18,15 @@ struct WeatherResults: Decodable {
     
     struct Current: Decodable {
         let tempC: Double
-        let condition: Condition
+        var condition: Condition
+        let windKph: Double
         
         struct Condition: Decodable {
             let text: String
+            var icon: String
+            let code: Int
         }
     }
+    
 }
+
